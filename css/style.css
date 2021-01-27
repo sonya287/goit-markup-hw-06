@@ -479,9 +479,10 @@ a {
   height: 15px;
   background-color: var(--accent-color);
   border-color: var(--accent-color);
-  background-image: url(./images/icon-check.svg);
+  background-image: url(../images/icon-check.svg);
   background-size: contain;
   background-origin: border-box;
+  background-position: 50% 50%;
 
   border-radius: 2px;
 }
