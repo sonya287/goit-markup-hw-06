@@ -282,9 +282,10 @@ a {
   position: absolute;
   top: 50%;
   left: 50%;
+  padding: 40px;
 
-  min-height: 580px;
-  min-width: 528px;
+  min-height: 500px;
+  min-width: 448px;
 
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -312,16 +313,15 @@ a {
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   background-color: var(--primary-background);
+
+  fill: #212121;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-button:hover,
 .modal-button:focus {
   cursor: pointer;
-}
-
-.icon-close:hover,
-.icon-close:focus {
-  fill: currentColor;
+  fill: var(--accent-color);
 }
 
 /* Оформление формы */
@@ -350,6 +350,8 @@ a {
   font-weight: 400;
   line-height: 1.16;
   letter-spacing: 0.01em;
+  color: #757575;
+  font-family: Roboto;
 }
 
 .icon-modal {
@@ -388,15 +390,21 @@ a {
   display: flex;
   flex-direction: column;
   margin-bottom: 20px;
+  font-family: Roboto;
 }
 
 .form-label-comment .comment {
   resize: none;
-  width: 448px;
-  height: 120px;
+  min-width: 448px;
+  min-height: 120px;
   padding: 12px 16px;
+  font-size: 14px;
+  font-family: Roboto;
+  letter-spacing: 0.01em;
 
-  color: #212121;
+  color: rgba(117, 117, 117, 0.5);
+
+  /*color: #212121;*/
 
   cursor: pointer;
 }
@@ -415,6 +423,8 @@ a {
   line-height: 1.16;
   letter-spacing: 0.01em;
 }
+
+/* Чекбокс */
 
 .checkbox {
   position: absolute;
@@ -438,6 +448,11 @@ a {
   padding-left: 36px;
 
   font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  font-style: Roboto san-serif;
+  color: #757575;
+  letter-spacing: 0.03em;
 }
 
 .label-checkbox::after {
@@ -459,14 +474,14 @@ a {
     border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.checkbox:checked ~ .label-checkbox::after {
+.checkbox:checked + .label-checkbox::after {
   width: 16px;
   height: 15px;
   background-color: var(--accent-color);
-  background-image: url(./images/check.svg);
+  border-color: var(--accent-color);
+  background-image: url(./images/icon-check.svg);
   background-size: contain;
   background-origin: border-box;
-  border-color: var(--accent-color);
 
   border-radius: 2px;
 }
@@ -480,18 +495,23 @@ a {
   color: var(--accent-color);
 }
 
+/* Кнопка Отправить*/
+
 .button-send {
   text-align: center;
+
+  /*transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);*/
 }
 
-.button-send.hero-button {
+.hero-button {
   padding-right: 56px;
   padding-left: 56px;
 }
 
 /* button */
 
-.hero .hero-button {
+.hero-button {
   padding: 10px 32px;
   display: inline-block;
 
@@ -511,7 +531,7 @@ a {
   letter-spacing: 0.06em;
 
   border-radius: 4px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  /*box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);*/
   /* border: 0;*/
 }
 
@@ -876,6 +896,7 @@ footer {
   display: flex;
   align-items: baseline;
   justify-content: flex-start;
+  background-image: url(images/icon-check.svg);
 }
 
 .footer-address > .logo {
