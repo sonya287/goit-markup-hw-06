@@ -896,7 +896,8 @@ footer {
 .container.footer {
   display: flex;
   align-items: baseline;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  align-content: center;
 }
 
 .footer-address > .logo {
@@ -1024,7 +1025,7 @@ footer {
 
 .subscribe-form input {
   padding-left: 16px;
-  min-width: 358px;
+  width: 358px;
   height: 50px;
   color: #ffffff;
   font-size: 16px;
